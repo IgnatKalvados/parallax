@@ -1,0 +1,33 @@
+// parallax место паралакс эффекта
+.parallax { 
+   perspective: 1px;
+    height: 100vh;
+ //    создает эффект глубины
+    overflow-x: hidden;
+    overflow-y: auto;
+ // позволяет скроллить контент внутри элемента
+}
+// этот класс будет определять слой для элементов, к которым будет применен эффект параллакса. Этот элемент абсолютно спозиционирован и занимает весь контейнер.
+.parallax__layer {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 100vh 0;
+}
+// используются для определения скорости скроллинга, с помощью задания смещения по оси Z
+.parallax__layer--base {
+    transform: translateZ(0);
+}
+// используются для определения скорости скроллинга, с помощью задания смещения по оси Z
+.parallax__layer--back {
+    transform: translateZ(-1px) scale(1);;
+}
+.title {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
